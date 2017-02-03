@@ -1,0 +1,49 @@
+HKCR
+{
+	SwfDetector.CDetector.1 = s 'CDetector Class'
+	{
+		CLSID = s '{D9ADE6D8-82AB-4DF3-82FC-D860291DA576}'
+	}
+	SwfDetector.CDetector = s 'CDetector Class'
+	{
+		CLSID = s '{D9ADE6D8-82AB-4DF3-82FC-D860291DA576}'
+		CurVer = s 'SwfDetector.CDetector.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D9ADE6D8-82AB-4DF3-82FC-D860291DA576} = s 'CDetector Class'
+		{
+			ProgID = s 'SwfDetector.CDetector.1'
+			VersionIndependentProgID = s 'SwfDetector.CDetector'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{AF75FD85-2F95-438A-BF1A-68650DD900AF}'
+		}
+	}
+}
+
+HKLM
+{
+  SOFTWARE
+  {
+    Microsoft
+    {	
+	 Windows
+	 {
+	   CurrentVersion
+	   {
+	     Explorer
+	     {
+		   'Browser Helper Objects'
+		   {
+			 ForceRemove {D9ADE6D8-82AB-4DF3-82FC-D860291DA576} = s 'CDetector Class'
+		   }
+	     }
+         }
+	  }
+     }
+   }
+}

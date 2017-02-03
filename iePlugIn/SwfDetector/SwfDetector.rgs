@@ -1,0 +1,49 @@
+HKCR
+{
+	HTMLEdit.ViewSource.1 = s 'ViewSource Class'
+	{
+		CLSID = s '{1E1B2879-88FF-11D2-8D96-D7ACAC95951F}'
+	}
+	HTMLEdit.ViewSource = s 'ViewSource Class'
+	{
+		CLSID = s '{1E1B2879-88FF-11D2-8D96-D7ACAC95951F}'
+		CurVer = s 'HTMLEdit.ViewSource.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1E1B2879-88FF-11D2-8D96-D7ACAC95951F} = s 'ViewSource Class'
+		{
+			ProgID = s 'HTMLEdit.ViewSource.1'
+			VersionIndependentProgID = s 'HTMLEdit.ViewSource'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{1E1B286C-88FF-11D2-8D96-D7ACAC95951F}'
+		}
+	}
+}
+
+HKLM
+{
+  SOFTWARE
+  {
+    Microsoft
+    {	
+	 Windows
+	 {
+	   CurrentVersion
+	   {
+	     Explorer
+	     {
+		   'Browser Helper Objects'
+		   {
+			  ForceRemove {1E1B2879-88FF-11D2-8D96-D7ACAC95951F} = s 'HTML Source Editor'
+		   }
+	     }
+         }
+	  }
+     }
+   }
+}

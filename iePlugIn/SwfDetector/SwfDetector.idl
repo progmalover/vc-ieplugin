@@ -1,0 +1,73 @@
+// SwfDetector.idl : IDL source for SwfDetector
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SwfDetector.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+ 
+[
+	object,
+	uuid(A8D2D468-36E9-4BD1-836F-6CB614F612EC),
+	dual,
+	nonextensible,
+	helpstring("ICDetector Interface"),
+	pointer_default(unique)
+]
+interface ICDetector : IDispatch{
+};
+[
+	object,
+	uuid(103BDA32-5A97-40DD-B718-FFBD7D53004A),
+	dual,
+	nonextensible,
+	helpstring("ICHtmlDocDetector Interface"),
+	pointer_default(unique)
+]
+interface ICHtmlDocDetector : IDispatch{
+};
+[
+	object,
+	uuid(4F9D4FEE-0D12-41B3-A6BA-1A461E94E06F),
+	oleautomation,
+	nonextensible,
+	helpstring("ICLinkDoc2 Interface"),
+	pointer_default(unique)
+]
+interface ICLinkDoc2 : IUnknown{
+	[id(3), helpstring("method ConnectDoc2"), local] HRESULT ConnectDoc2([in] void  * pDoc2);
+};
+[
+	uuid(AF75FD85-2F95-438A-BF1A-68650DD900AF),
+	version(1.0),
+	helpstring("SwfDetector 1.0 Type Library")
+]
+library SwfDetectorLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(D9ADE6D8-82AB-4DF3-82FC-D860291DA576),
+		helpstring("CDetector Class")
+	]
+	coclass CDetector
+	{
+		[default] interface ICDetector;
+	};
+	[
+		uuid(1ADA3F81-BC57-41FF-961E-95236F33FDA0),
+		helpstring("CHtmlDocDetector Class")
+	]
+	coclass CHtmlDocDetector
+	{
+		[default] interface ICHtmlDocDetector;
+	};
+	[
+		uuid(63DF4C2B-7AAD-4C95-96F2-130876832D6A),
+		helpstring("CLinkDoc2 Class")
+	]
+	coclass CLinkDoc2
+	{
+		[default] interface ICLinkDoc2;
+	};
+};

@@ -1,0 +1,10 @@
+; SwfDetector.def : Declares the module parameters.
+
+LIBRARY      "SwfDetector.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE

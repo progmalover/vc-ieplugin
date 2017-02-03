@@ -1,0 +1,26 @@
+HKCR
+{
+	SwfDetector.CHtmlDocDetector.1 = s 'CHtmlDocDetector Class'
+	{
+		CLSID = s '{1ADA3F81-BC57-41FF-961E-95236F33FDA0}'
+	}
+	SwfDetector.CHtmlDocDetector = s 'CHtmlDocDetector Class'
+	{
+		CLSID = s '{1ADA3F81-BC57-41FF-961E-95236F33FDA0}'
+		CurVer = s 'SwfDetector.CHtmlDocDetector.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1ADA3F81-BC57-41FF-961E-95236F33FDA0} = s 'CHtmlDocDetector Class'
+		{
+			ProgID = s 'SwfDetector.CHtmlDocDetector.1'
+			VersionIndependentProgID = s 'SwfDetector.CHtmlDocDetector'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{AF75FD85-2F95-438A-BF1A-68650DD900AF}'
+		}
+	}
+}

@@ -1,0 +1,24 @@
+HKCR
+{
+	SwfDetector.CLinkDoc2.1 = s 'CLinkDoc2 Class'
+	{
+		CLSID = s '{63DF4C2B-7AAD-4C95-96F2-130876832D6A}'
+	}
+	SwfDetector.CLinkDoc2 = s 'CLinkDoc2 Class'
+	{
+		CLSID = s '{63DF4C2B-7AAD-4C95-96F2-130876832D6A}'
+		CurVer = s 'SwfDetector.CLinkDoc2.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {63DF4C2B-7AAD-4C95-96F2-130876832D6A} = s 'CLinkDoc2 Class'
+		{
+			ProgID = s 'SwfDetector.CLinkDoc2.1'
+			VersionIndependentProgID = s 'SwfDetector.CLinkDoc2'
+			InprocServer32 = s '%MODULE%'
+			{
+			}
+			'TypeLib' = s '{AF75FD85-2F95-438A-BF1A-68650DD900AF}'
+		}
+	}
+}

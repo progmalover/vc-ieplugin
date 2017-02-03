@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[SwfDetector.vcproj]
+SCC_Aux_Path = "\\Devserver\DevProjects\SWFDecompiler\VSS"
+SCC_Project_Name = "$/src/SwfDetector/SwfDetector/SwfDetector", CQFAAAAA
+
+[SwfDetectorPS.vcproj]
+SCC_Aux_Path = "\\Devserver\DevProjects\SWFDecompiler\VSS"
+SCC_Project_Name = "$/src/SwfDetector/SwfDetector/SwfDetector", CQFAAAAA
